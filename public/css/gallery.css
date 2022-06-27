@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+@import './variables.css';
+@import './utilities.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header{
+  background: linear-gradient(135deg,rgb(10, 10, 10),rgba(0,0,0,0.2)),
+  url('../img/gallery/img.jpg');
+  min-height: 100vh;
+  background-size: cover;
+}
+
+header nav{
+  padding: 20px 40px 20px 100px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  /* border-bottom: 1px solid var(--gray); */
+}
+
+header nav .brand a img{
+  height: 60px;
+  /* border-radius: 50px; */
+}
+
+header nav .brand h1{
+  color: var(--mild);
+}
+
+header nav .nav-right{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .nav-right a{
+  text-decoration: none;
+  color: var(--dark);
+  margin-right: 30px;
+  position: relative;
+}
+
+header nav .nav-right a:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 0;
+  height: 2px;
+  background: var(--pure);
+  transition: width .3s ease-in-out;
+}
+
+header nav .nav-right a:hover:after{
+  width: 70%;
+}
+
+header nav .nav-right a.active:after{
+  width: 70%;
+}
+
+header nav .nav-right .search > div{
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 50px;
+}
+
+header nav .nav-right .search > div input{
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: var(--pure);
+}
+
+header nav .nav-right .search > div img{
+  padding-right: 16px;
+}
+
+.hero .cta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 80px);
+}
+
+.hero .cta h1, h3{
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.hero .cta > div{
+  flex: 1;
+}
+
+.hero .cta .left-section{
+  padding:  152px 0  0 136px;
+}
+
+/* gallery css */
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+}
+
+.container .heading{
+  width: 50%;
+  padding-bottom: 50px;
+}
+.container .heading h3{
+  font-size: 3em;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #222;
+}
+
+.container .heading h3 span{
+  font-weight: 100;
+}
+.container .box{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+.container .box .dream{
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.container .box .dream img{
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+.container .btn{
+  margin: 40px 0 70px 0;
+  background: #222;
+  padding: 15px 40px ;
+  border-radius: 5px;
+}
+
+.container .btn a{
+ color: #fff;
+ font-size: 1.2em;
+ text-decoration: none;
+ font-weight: bolder;
+ letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 769px){
+    .container .box{
+   flex-direction: column;
+  }
+
+.container .box .dream{
+  width: 100%;
+}
+}
+
+@media only screen and (max-width: 643px){
+.container .heading{
+  width: 100%;
+}
+.container .heading h3{
+  font-size: 1em;
+
+}
+}
